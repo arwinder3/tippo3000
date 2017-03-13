@@ -80,7 +80,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" misplaced="YES" id="sBc-8V-KAu">
+                            <view hidden="YES" contentMode="scaleToFill" misplaced="YES" id="sBc-8V-KAu">
                                 <rect key="frame" x="16" y="461" width="343" height="186"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -164,8 +164,15 @@
                             <outletCollection property="gestureRecognizers" destination="MrP-XV-Uxr" appends="YES" id="GTV-gQ-aKW"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" title="Tippo-3000" id="APs-Wf-JSE"/>
+                    <navigationItem key="navigationItem" title="Tippo-3000" id="APs-Wf-JSE">
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="1UI-sb-QxH">
+                            <connections>
+                                <segue destination="qwR-Ws-TC8" kind="push" id="N2E-ZT-81u"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="amountPerFriendView" destination="sBc-8V-KAu" id="H6L-BR-fJQ"/>
                         <outlet property="billTextField" destination="Vyc-Tk-TVO" id="p7O-hD-QyP"/>
                         <outlet property="fourFriendLabel" destination="55w-Hd-HAt" id="sBC-wJ-9Bz"/>
                         <outlet property="oneFriendLabel" destination="Mhe-ZX-2ry" id="iJc-Ej-ReO"/>
@@ -202,6 +209,86 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p0M-ah-IwA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-49.5" y="152.5"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="cU8-hO-VVn">
+            <objects>
+                <viewController id="qwR-Ws-TC8" customClass="SettingsViewController" customModule="tippo3000" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xsJ-Uo-gzU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Change Tip Percentages" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hAl-US-S2h">
+                                <rect key="frame" x="16" y="95" width="189" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Low" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KeK-1d-jRK">
+                                <rect key="frame" x="16" y="141" width="31" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Medium" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fad-sq-eZ1">
+                                <rect key="frame" x="16" y="191" width="62" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" id="tVF-ZZ-fgO">
+                                <rect key="frame" x="264" y="136" width="95" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <connections>
+                                    <action selector="lowPercentageChanged:" destination="qwR-Ws-TC8" eventType="editingChanged" id="68p-iu-0rH"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" id="Nd8-2d-qwf">
+                                <rect key="frame" x="264" y="236" width="95" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <connections>
+                                    <action selector="highPercentageChanged:" destination="qwR-Ws-TC8" eventType="editingChanged" id="Tk7-qL-exi"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" id="m94-2I-dfd">
+                                <rect key="frame" x="264" y="186" width="95" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <connections>
+                                    <action selector="mediumPercentageChanged:" destination="qwR-Ws-TC8" eventType="editingChanged" id="0tb-Mf-HyJ"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="High" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="enr-QL-0xu">
+                                <rect key="frame" x="16" y="241" width="36" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Settings" id="Tdg-xE-6fJ"/>
+                    <connections>
+                        <outlet property="highPercentageField" destination="Nd8-2d-qwf" id="TDw-9D-9TT"/>
+                        <outlet property="lowPercentageField" destination="tVF-ZZ-fgO" id="BaP-u5-kKJ"/>
+                        <outlet property="mediumPercentageField" destination="m94-2I-dfd" id="G5O-HP-11A"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="39Z-eZ-hf3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1106.5" y="152.5"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

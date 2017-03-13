@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA05A02F1E75BAD90021D9DE /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA05A02E1E75BAD90021D9DE /* SettingsViewController.swift */; };
 		AAAB472C1E759EBE00DE69E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAB472B1E759EBE00DE69E6 /* AppDelegate.swift */; };
 		AAAB472E1E759EBE00DE69E6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAB472D1E759EBE00DE69E6 /* ViewController.swift */; };
 		AAAB47311E759EBE00DE69E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAAB472F1E759EBE00DE69E6 /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AA05A02E1E75BAD90021D9DE /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = tippo3000/SettingsViewController.swift; sourceTree = "<group>"; };
 		AAAB47281E759EBE00DE69E6 /* tippo3000.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tippo3000.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAAB472B1E759EBE00DE69E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AAAB472D1E759EBE00DE69E6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 		AAAB471F1E759EBD00DE69E6 = {
 			isa = PBXGroup;
 			children = (
+				AA05A02E1E75BAD90021D9DE /* SettingsViewController.swift */,
 				AAAB472A1E759EBE00DE69E6 /* tippo3000 */,
 				AAAB473F1E759EBE00DE69E6 /* tippo3000Tests */,
 				AAAB474A1E759EBE00DE69E6 /* tippo3000UITests */,
@@ -261,6 +264,7 @@
 			files = (
 				AAAB472E1E759EBE00DE69E6 /* ViewController.swift in Sources */,
 				AAAB472C1E759EBE00DE69E6 /* AppDelegate.swift in Sources */,
+				AA05A02F1E75BAD90021D9DE /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,6 +509,7 @@
 				AAAB47521E759EBE00DE69E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AAAB47531E759EBE00DE69E6 /* Build configuration list for PBXNativeTarget "tippo3000Tests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +518,7 @@
 				AAAB47551E759EBE00DE69E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AAAB47561E759EBE00DE69E6 /* Build configuration list for PBXNativeTarget "tippo3000UITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +527,7 @@
 				AAAB47581E759EBE00DE69E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
