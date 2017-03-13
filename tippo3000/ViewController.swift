@@ -28,24 +28,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view, typically from a nib.
-
-        // Check if we have any defaults for low, medium, high tip percentages
-        /*
-        let defaults = UserDefaults.init()
-        let defaultLowTipPercentage = defaults.double(forKey: "lowTipPercentage")
-        let defaultMediumTipPercentage = defaults.double(forKey: "mediumTipPercentage")
-        let defaultHighTipPercentage = defaults.double(forKey: "maxTipPercentage")
-        defaults.synchronize()
-        
-        if (defaultLowTipPercentage > 0) {
-            tipPercentages[0] = defaultLowTipPercentage
-        }
-        if (defaultMediumTipPercentage > 0) {
-            tipPercentages[1] = defaultMediumTipPercentage
-        }
-        if (defaultHighTipPercentage > 0) {
-            tipPercentages[2] = defaultHighTipPercentage
-        }*/
     }
     
     override func viewWillAppear(_ animated: Bool) {
