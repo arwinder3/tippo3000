@@ -31,6 +31,8 @@ class ViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        self.billTextField.becomeFirstResponder()
+        
         let defaults = UserDefaults.standard
         let defaultLowTipPercentage = defaults.integer(forKey: "lowTipPercentage")
         let defaultMediumTipPercentage = defaults.integer(forKey: "mediumTipPercentage")
@@ -50,9 +52,23 @@ class ViewController: UIViewController {
         tipPercentageControl.setTitle("\(tipPercentages[1])%", forSegmentAt: 1)
         tipPercentageControl.setTitle("\(tipPercentages[2])%", forSegmentAt: 2)
         
-        // TODO: Calculate the tip again, in case the default percentages have changed.
-        // They could change due to a change in settings. This would cause the UI to show the tip
-        // at the old tip value, if changed.
+        // TODO: This is repeated tip calculation code. Find a way to make this common.
+        let bill = Double(billTextField.text!) ?? 0
+        let tip = bill * Double(Double(tipPercentages[tipPercentageControl.selectedSegmentIndex]) / Double(100))
+        let total = bill + tip
+        
+        tipLabel.text = String(format: "$%.2f", tip)
+        totalLabel.text = String(format: "$%.2f", total)
+        
+        if (bill > 0) {
+            oneFriendLabel.text = String(format: "$%.2f", total)
+            twoFriendLabel.text = String(format: "$%.2f", total / 2)
+            threeFriendLabel.text = String(format: "$%.2f", total / 3)
+            fourFriendLabel.text = String(format: "$%.2f", total / 4)
+            amountPerFriendView.isHidden = false
+        } else {
+            amountPerFriendView.isHidden = true
+        }
     }
     
     override func didReceiveMemoryWarning() {

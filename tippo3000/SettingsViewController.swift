@@ -26,7 +26,7 @@ class SettingsViewController: UIViewController {
         let defaultLowTipPercentage = defaults.integer(forKey: "lowTipPercentage")
         let defaultMediumTipPercentage = defaults.integer(forKey: "mediumTipPercentage")
         let defaultHighTipPercentage = defaults.integer(forKey: "highTipPercentage")
-
+        
         if (defaultLowTipPercentage > 0) {
             lowPercentageField.text = "\(defaultLowTipPercentage)"
         } else {
@@ -59,7 +59,7 @@ class SettingsViewController: UIViewController {
         }
         defaults.synchronize()
     }
-
+    
     @IBAction func mediumPercentageChanged(_ sender: Any) {
         if (mediumPercentageField.text != "") {
             defaults.set(Int(mediumPercentageField.text!)!, forKey: "mediumTipPercentage")
