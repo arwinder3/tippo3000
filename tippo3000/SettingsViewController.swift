@@ -21,7 +21,7 @@ class SettingsViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-
+    
     override func viewWillAppear(_ animated: Bool) {
         let defaultLowTipPercentage = defaults.integer(forKey: "lowTipPercentage")
         let defaultMediumTipPercentage = defaults.integer(forKey: "mediumTipPercentage")

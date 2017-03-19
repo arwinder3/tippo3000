@@ -31,7 +31,9 @@ class ViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.billTextField.becomeFirstResponder()
+        if (!self.billTextField.isFirstResponder) {
+            self.billTextField.becomeFirstResponder()
+        }        
         
         let defaults = UserDefaults.standard
         let defaultLowTipPercentage = defaults.integer(forKey: "lowTipPercentage")

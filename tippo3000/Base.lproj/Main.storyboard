@@ -17,22 +17,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" id="Tvd-IQ-jjp">
+                            <view autoresizesSubviews="NO" contentMode="topRight" misplaced="YES" id="Tvd-IQ-jjp" userLabel="EnterAmountView">
                                 <rect key="frame" x="0.0" y="65" width="375" height="203"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="$" textAlignment="right" minimumFontSize="17" id="Vyc-Tk-TVO">
-                                        <rect key="frame" x="0.0" y="12" width="375" height="122"/>
+                                        <rect key="frame" x="0.0" y="33" width="375" height="66"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="70"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                         <connections>
                                             <action selector="calculateTip:" destination="BYZ-38-t0r" eventType="editingChanged" id="dMq-Ph-0Jt"/>
                                         </connections>
                                     </textField>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="amH-OX-jNH">
-                                        <rect key="frame" x="85" y="142" width="204" height="29"/>
+                                        <rect key="frame" x="85" y="137" width="204" height="29"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <segments>
@@ -46,8 +46,9 @@
                                     </segmentedControl>
                                 </subviews>
                                 <color key="backgroundColor" red="0.95818409229068746" green="0.99712215148437322" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                             </view>
-                            <view contentMode="scaleToFill" misplaced="YES" id="AO2-6C-YXX">
+                            <view contentMode="scaleToFill" misplaced="YES" id="AO2-6C-YXX" userLabel="ResultView">
                                 <rect key="frame" x="0.0" y="269" width="375" height="159"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -68,7 +69,7 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.46256850618685652" green="0.51969154502045756" blue="0.55849255181347157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <view hidden="YES" contentMode="scaleToFill" misplaced="YES" id="sBc-8V-KAu">
+                            <view hidden="YES" contentMode="scaleToFill" misplaced="YES" id="sBc-8V-KAu" userLabel="TotalBreakdownView">
                                 <rect key="frame" x="0.0" y="428" width="375" height="239"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
